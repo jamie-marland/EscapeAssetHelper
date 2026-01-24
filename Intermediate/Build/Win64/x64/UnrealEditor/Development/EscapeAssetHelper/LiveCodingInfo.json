@@ -1,0 +1,35 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EscapeAssetHelper.cpp.obj": [
+			"AssetHandlingSettings.gen.cpp.obj",
+			"AssetHandlingSubsystem.gen.cpp.obj",
+			"AssetNamingParser.gen.cpp.obj",
+			"AssetNamingSubsystem.gen.cpp.obj",
+			"AssetNamingTypes.gen.cpp.obj",
+			"AssetValidatorActionBase.gen.cpp.obj",
+			"AssetValidatorActions.gen.cpp.obj",
+			"AssetValidatorQueries.gen.cpp.obj",
+			"AssetValidatorQueryBase.gen.cpp.obj",
+			"AssetValidatorRuleBase.gen.cpp.obj",
+			"AssetValidatorSubsystem.gen.cpp.obj",
+			"AssetValidatorTypes.gen.cpp.obj",
+			"EscapeAssetHelper.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"AssetHandlingOverlay.cpp.obj",
+			"AssetHandlingSettings.cpp.obj",
+			"AssetHandlingSubsystem.cpp.obj",
+			"AssetNamingParser.cpp.obj",
+			"AssetNamingSubsystem.cpp.obj",
+			"AssetNamingTypes.cpp.obj",
+			"SAssetNamingDialog.cpp.obj",
+			"AssetValidatorActionBase.cpp.obj",
+			"AssetValidatorActions.cpp.obj",
+			"AssetValidatorQueries.cpp.obj",
+			"AssetValidatorQueryBase.cpp.obj",
+			"AssetValidatorRuleBase.cpp.obj",
+			"AssetValidatorSubsystem.cpp.obj",
+			"EscapeAssetHelper.cpp.obj"
+		]
+	}
+}

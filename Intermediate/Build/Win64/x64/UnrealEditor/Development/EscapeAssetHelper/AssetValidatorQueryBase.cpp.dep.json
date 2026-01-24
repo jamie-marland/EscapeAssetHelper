@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "m:\\year 3\\industry\\pluginspace\\pluginproject\\plugins\\escapeassethelper\\source\\escapeassethelper\\private\\assetvalidator\\assetvalidatorquerybase.cpp",
+        "ProvidedModule": "",
+        "PCH": "m:\\year 3\\industry\\pluginspace\\pluginproject\\intermediate\\build\\win64\\x64\\pluginprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "m:\\year 3\\industry\\pluginspace\\pluginproject\\plugins\\escapeassethelper\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\escapeassethelper\\definitions.escapeassethelper.h",
+            "m:\\year 3\\industry\\pluginspace\\pluginproject\\plugins\\escapeassethelper\\source\\escapeassethelper\\public\\assetvalidator\\assetvalidatorquerybase.h",
+            "d:\\jamie\\unreal\\ue_5.6\\engine\\source\\editor\\blutility\\classes\\editorutilityobject.h",
+            "d:\\jamie\\unreal\\ue_5.6\\engine\\source\\runtime\\engine\\public\\iassetregistrytagproviderinterface.h",
+            "d:\\jamie\\unreal\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\iassetregistrytagproviderinterface.generated.h",
+            "d:\\jamie\\unreal\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blutility\\uht\\editorutilityobject.generated.h",
+            "m:\\year 3\\industry\\pluginspace\\pluginproject\\plugins\\escapeassethelper\\intermediate\\build\\win64\\unrealeditor\\inc\\escapeassethelper\\uht\\assetvalidatorquerybase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

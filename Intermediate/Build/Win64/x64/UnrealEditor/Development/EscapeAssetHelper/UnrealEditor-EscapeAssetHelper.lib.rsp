@@ -1,0 +1,26 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-EscapeAssetHelper.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"M:/Year 3/Industry/PluginSpace/PluginProject/Intermediate/Build/Win64/x64/PluginProjectEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/Module.EscapeAssetHelper.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/EscapeAssetHelper.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetHandlingOverlay.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetHandlingSettings.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetHandlingSubsystem.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetNamingParser.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetNamingSubsystem.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetNamingTypes.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/SAssetNamingDialog.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetValidatorActionBase.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetValidatorActions.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetValidatorQueries.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetValidatorQueryBase.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetValidatorRuleBase.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/AssetValidatorSubsystem.cpp.obj"
+"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/Default.rc2.res"
+/OUT:"M:/Year 3/Industry/PluginSpace/PluginProject/Plugins/EscapeAssetHelper/Intermediate/Build/Win64/x64/UnrealEditor/Development/EscapeAssetHelper/UnrealEditor-EscapeAssetHelper.lib"

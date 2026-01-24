@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "EditorUtilityObject.h"
 #include "AssetValidatorQueryBase.generated.h"
 
 /**
@@ -13,7 +13,7 @@ UCLASS(Abstract, EditInlineNew, DefaultToInstanced, Blueprintable, BlueprintType
 	DisplayName = "Asset Validator Query Base",
 	AutoExpandCategories = ("Asset Validator"),
 	CollapseCategories)
-class ESCAPEASSETHELPER_API UAssetValidatorQueryBase : public UObject
+class ESCAPEASSETHELPER_API UAssetValidatorQueryBase : public UEditorUtilityObject
 {
 	GENERATED_BODY()
 
