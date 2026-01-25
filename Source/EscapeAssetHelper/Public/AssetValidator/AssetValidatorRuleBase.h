@@ -6,6 +6,8 @@
 #include "AssetValidator/AssetValidatorActionBase.h"
 #include "AssetValidatorRuleBase.generated.h"
 
+class UAssetValidatorSubsystem;
+
 /**
  * Abstract base class for asset validator rules.
  * Rules are data assets that combine queries and actions for asset validation.
@@ -22,13 +24,13 @@ class ESCAPEASSETHELPER_API UAssetValidatorRuleBase : public UDataAsset
 public:
 	/**
 	 * Apply this rule to the given asset.
-	 * @param Factory The factory used to import/create the asset (may be null)
+	 * @param Subsystem The validator subsystem for accessing editor functionality
 	 * @param Asset The asset to apply the rule to
 	 * @return True if the rule was applied successfully
 	 */
 	UFUNCTION(BlueprintNativeEvent, Category = "Asset Validator")
-	bool Apply(UFactory* Factory, UObject* Asset);
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset);
+	bool Apply(UAssetValidatorSubsystem* Subsystem, UObject* Asset);
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset);
 };
 
 /**
@@ -42,7 +44,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorRule : public UAssetValidatorRuleBase
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Queries that determine if this rule should apply.

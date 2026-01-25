@@ -1,4 +1,5 @@
 #include "AssetValidator/AssetValidatorActions.h"
+#include "AssetValidator/AssetValidatorSubsystem.h"
 #include "AssetHandling/AssetHandlingSettings.h"
 #include "EditorAssetLibrary.h"
 #include "Engine/Texture.h"
@@ -16,7 +17,7 @@
 
 // ==================== UAssetValidatorActionSetAssetTags ====================
 
-bool UAssetValidatorActionSetAssetTags::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionSetAssetTags::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset))
 	{
@@ -38,7 +39,7 @@ bool UAssetValidatorActionSetAssetTags::Apply_Implementation(UFactory* Factory, 
 
 // ==================== UAssetValidatorActionRemoveAssetTags ====================
 
-bool UAssetValidatorActionRemoveAssetTags::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionRemoveAssetTags::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset))
 	{
@@ -60,7 +61,7 @@ bool UAssetValidatorActionRemoveAssetTags::Apply_Implementation(UFactory* Factor
 
 // ==================== UAssetValidatorActionLogMessage ====================
 
-bool UAssetValidatorActionLogMessage::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionLogMessage::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset))
 	{
@@ -98,7 +99,7 @@ bool UAssetValidatorActionLogMessage::Apply_Implementation(UFactory* Factory, UO
 
 // ==================== UAssetValidatorActionMarkModified ====================
 
-bool UAssetValidatorActionMarkModified::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionMarkModified::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset))
 	{
@@ -111,7 +112,7 @@ bool UAssetValidatorActionMarkModified::Apply_Implementation(UFactory* Factory, 
 
 // ==================== UAssetValidatorActionSetPropertyValue ====================
 
-bool UAssetValidatorActionSetPropertyValue::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionSetPropertyValue::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset) || PropertyName == NAME_None)
 	{
@@ -174,7 +175,7 @@ bool UAssetValidatorActionSetPropertyValue::Apply_Implementation(UFactory* Facto
 
 // ==================== UAssetValidatorActionShowNotification ====================
 
-bool UAssetValidatorActionShowNotification::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionShowNotification::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset))
 	{
@@ -230,7 +231,7 @@ bool UAssetValidatorActionShowNotification::Apply_Implementation(UFactory* Facto
 
 // ==================== UAssetValidatorActionMoveAsset ====================
 
-bool UAssetValidatorActionMoveAsset::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionMoveAsset::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset) || TargetFolderPath.IsEmpty())
 	{

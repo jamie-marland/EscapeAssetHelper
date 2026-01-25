@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UAssetValidatorActionSetAssetTags ****************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionSetAssetTags_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_35_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_37_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionSetAssetTags(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionSetAssetTags_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionSetAssetTags)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_35_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_37_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionSetAssetTags(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionSetAssetTags();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_32_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_35_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_34_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_37_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_35_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_35_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_37_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_37_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -59,7 +59,7 @@ class UAssetValidatorActionSetAssetTags;
 // ********** Begin Class UAssetValidatorActionRemoveAssetTags *************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionRemoveAssetTags_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_55_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_57_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionRemoveAssetTags(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionRemoveAssetTags_Statics; \
@@ -70,7 +70,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionRemoveAssetTags)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_55_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_57_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionRemoveAssetTags(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -82,12 +82,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionRemoveAssetTags();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_52_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_55_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_54_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_57_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_55_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_55_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_57_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_57_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -99,7 +99,7 @@ class UAssetValidatorActionRemoveAssetTags;
 // ********** Begin Class UAssetValidatorActionLogMessage ******************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionLogMessage_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_75_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_77_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionLogMessage(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionLogMessage_Statics; \
@@ -110,7 +110,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionLogMessage)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_75_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_77_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionLogMessage(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -122,12 +122,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionLogMessage();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_72_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_75_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_74_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_77_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_75_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_75_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_77_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_77_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -139,7 +139,7 @@ class UAssetValidatorActionLogMessage;
 // ********** Begin Class UAssetValidatorActionMarkModified ****************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionMarkModified_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_101_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_103_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionMarkModified(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionMarkModified_Statics; \
@@ -150,7 +150,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionMarkModified)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_101_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_103_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionMarkModified(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -162,12 +162,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionMarkModified();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_98_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_101_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_100_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_103_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_101_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_101_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_103_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_103_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -179,7 +179,7 @@ class UAssetValidatorActionMarkModified;
 // ********** Begin Class UAssetValidatorActionSetPropertyValue ************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionSetPropertyValue_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_114_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_116_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionSetPropertyValue(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionSetPropertyValue_Statics; \
@@ -190,7 +190,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionSetPropertyValue)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_114_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_116_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionSetPropertyValue(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -202,12 +202,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionSetPropertyValue();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_111_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_114_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_113_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_116_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_114_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_114_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_116_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_116_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -219,7 +219,7 @@ class UAssetValidatorActionSetPropertyValue;
 // ********** Begin Class UAssetValidatorActionShowNotification ************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionShowNotification_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_141_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_143_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionShowNotification(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionShowNotification_Statics; \
@@ -230,7 +230,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionShowNotification)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_141_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_143_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionShowNotification(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -242,12 +242,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionShowNotification();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_138_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_141_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_140_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_143_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_141_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_141_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_143_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_143_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -259,7 +259,7 @@ class UAssetValidatorActionShowNotification;
 // ********** Begin Class UAssetValidatorActionMoveAsset *******************************************
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionMoveAsset_NoRegister();
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_171_INCLASS_NO_PURE_DECLS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_173_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAssetValidatorActionMoveAsset(); \
 	friend struct Z_Construct_UClass_UAssetValidatorActionMoveAsset_Statics; \
@@ -270,7 +270,7 @@ public: \
 	DECLARE_SERIALIZER(UAssetValidatorActionMoveAsset)
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_171_ENHANCED_CONSTRUCTORS \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_173_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAssetValidatorActionMoveAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -282,12 +282,12 @@ public: \
 	NO_API virtual ~UAssetValidatorActionMoveAsset();
 
 
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_168_PROLOG
-#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_171_GENERATED_BODY \
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_170_PROLOG
+#define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_173_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_171_INCLASS_NO_PURE_DECLS \
-	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_171_ENHANCED_CONSTRUCTORS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_173_INCLASS_NO_PURE_DECLS \
+	FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActions_h_173_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

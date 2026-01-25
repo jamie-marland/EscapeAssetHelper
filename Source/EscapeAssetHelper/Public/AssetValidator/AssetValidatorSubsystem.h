@@ -85,6 +85,15 @@ public:
 	 */
 	void ShowValidationNotification(const FAssetValidatorResult& Result, bool bShowFixButton = true);
 
+	/**
+	 * Get any editor subsystem by class. Use this in Blueprint actions to access
+	 * editor functionality without triggering the "Editor Utilities only" warning.
+	 * @param SubsystemClass The subsystem class to get
+	 * @return The subsystem instance, or nullptr if not available
+	 */
+	UFUNCTION(BlueprintCallable, Category = "Asset Validator", meta = (DeterminesOutputType = "SubsystemClass"))
+	UEditorSubsystem* GetEditorSubsystemByClass(TSubclassOf<UEditorSubsystem> SubsystemClass) const;
+
 private:
 	/** Handle asset pre-save event */
 	void OnAssetPreSave(UObject* Asset, FObjectPreSaveContext SaveContext);

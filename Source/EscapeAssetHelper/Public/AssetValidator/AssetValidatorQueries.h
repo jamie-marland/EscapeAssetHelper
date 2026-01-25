@@ -4,6 +4,8 @@
 #include "AssetValidator/AssetValidatorQueryBase.h"
 #include "AssetValidatorQueries.generated.h"
 
+class UAssetValidatorSubsystem;
+
 /**
  * Query that checks if an asset has a specific metadata tag.
  * Returns true if the tag exists and optionally matches a specific value.
@@ -14,7 +16,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQueryCheckAssetTag : public UAssetVal
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The metadata tag key to check */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator",
@@ -65,7 +67,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQuerySourceFilenameStartsWith : publi
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The string the filename should start with */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator")
@@ -82,7 +84,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQuerySourceFilenameEndsWith : public 
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The string the filename should end with */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator")
@@ -98,7 +100,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQuerySourcePathContains : public UAss
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The substring to search for in the source path */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator")
@@ -114,7 +116,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQuerySourceExtensionMatches : public 
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Comma-delimited list of valid extensions to match.
@@ -133,7 +135,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQueryDestinationPathContains : public
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The substring to search for in the asset's project path */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator")
@@ -153,7 +155,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQueryAssetClassMatches : public UAsse
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The class the asset should be or derive from */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator",
@@ -174,7 +176,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQueryAssetNameMatches : public UAsset
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Pattern to match against the asset name.
@@ -218,7 +220,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQueryCheckPropertyValue : public UAss
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The name of the property to check */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator")
@@ -254,7 +256,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorQueryAssetInExpectedFolder : public U
 	GENERATED_BODY()
 
 public:
-	virtual bool Test_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * The expected folder path. Supports tokens:

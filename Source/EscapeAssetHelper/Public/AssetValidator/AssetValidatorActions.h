@@ -4,6 +4,8 @@
 #include "AssetValidator/AssetValidatorActionBase.h"
 #include "AssetValidatorActions.generated.h"
 
+class UAssetValidatorSubsystem;
+
 /** Log verbosity level for the Log Message action */
 UENUM(BlueprintType)
 enum class EAssetValidatorLogVerbosity : uint8
@@ -35,7 +37,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionSetAssetTags : public UAssetVal
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Map of metadata tags to set on the asset.
@@ -55,7 +57,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionRemoveAssetTags : public UAsset
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * List of metadata tag keys to remove from the asset.
@@ -75,7 +77,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionLogMessage : public UAssetValid
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Message to log. Supports format tokens:
@@ -101,7 +103,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionMarkModified : public UAssetVal
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 };
 
 /**
@@ -114,7 +116,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionSetPropertyValue : public UAsse
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/** The name of the property to set */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Asset Validator")
@@ -141,7 +143,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionShowNotification : public UAsse
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Message to display. Supports format tokens:
@@ -171,7 +173,7 @@ class ESCAPEASSETHELPER_API UAssetValidatorActionMoveAsset : public UAssetValida
 	GENERATED_BODY()
 
 public:
-	virtual bool Apply_Implementation(UFactory* Factory, UObject* Asset) override;
+	virtual bool Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset) override;
 
 	/**
 	 * Target folder path. Supports tokens:

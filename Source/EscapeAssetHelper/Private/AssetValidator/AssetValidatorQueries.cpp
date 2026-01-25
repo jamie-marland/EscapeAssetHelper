@@ -1,4 +1,5 @@
 #include "AssetValidator/AssetValidatorQueries.h"
+#include "AssetValidator/AssetValidatorSubsystem.h"
 #include "AssetHandling/AssetHandlingSettings.h"
 #include "EditorFramework/AssetImportData.h"
 #include "EditorAssetLibrary.h"
@@ -14,7 +15,7 @@
 
 // ==================== UAssetValidatorQueryCheckAssetTag ====================
 
-bool UAssetValidatorQueryCheckAssetTag::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQueryCheckAssetTag::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (AssetTagKey == NAME_None)
 	{
@@ -87,7 +88,7 @@ bool UAssetValidatorQuerySourcePathBase::GetSourcePath(const UObject* Asset, FSt
 
 // ==================== UAssetValidatorQuerySourceFilenameStartsWith ====================
 
-bool UAssetValidatorQuerySourceFilenameStartsWith::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQuerySourceFilenameStartsWith::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	FString SourcePath;
 	if (GetSourcePath(Asset, SourcePath))
@@ -100,7 +101,7 @@ bool UAssetValidatorQuerySourceFilenameStartsWith::Test_Implementation(UFactory*
 
 // ==================== UAssetValidatorQuerySourceFilenameEndsWith ====================
 
-bool UAssetValidatorQuerySourceFilenameEndsWith::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQuerySourceFilenameEndsWith::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	FString SourcePath;
 	if (GetSourcePath(Asset, SourcePath))
@@ -132,7 +133,7 @@ bool UAssetValidatorQuerySourceFilenameEndsWith::Test_Implementation(UFactory* F
 
 // ==================== UAssetValidatorQuerySourcePathContains ====================
 
-bool UAssetValidatorQuerySourcePathContains::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQuerySourcePathContains::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	FString SourcePath;
 	if (GetSourcePath(Asset, SourcePath))
@@ -144,7 +145,7 @@ bool UAssetValidatorQuerySourcePathContains::Test_Implementation(UFactory* Facto
 
 // ==================== UAssetValidatorQuerySourceExtensionMatches ====================
 
-bool UAssetValidatorQuerySourceExtensionMatches::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQuerySourceExtensionMatches::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	FString SourcePath;
 	if (GetSourcePath(Asset, SourcePath))
@@ -170,7 +171,7 @@ bool UAssetValidatorQuerySourceExtensionMatches::Test_Implementation(UFactory* F
 
 // ==================== UAssetValidatorQueryDestinationPathContains ====================
 
-bool UAssetValidatorQueryDestinationPathContains::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQueryDestinationPathContains::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset))
 	{
@@ -182,7 +183,7 @@ bool UAssetValidatorQueryDestinationPathContains::Test_Implementation(UFactory* 
 
 // ==================== UAssetValidatorQueryAssetClassMatches ====================
 
-bool UAssetValidatorQueryAssetClassMatches::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQueryAssetClassMatches::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset) || !AssetClass)
 	{
@@ -201,7 +202,7 @@ bool UAssetValidatorQueryAssetClassMatches::Test_Implementation(UFactory* Factor
 
 // ==================== UAssetValidatorQueryAssetNameMatches ====================
 
-bool UAssetValidatorQueryAssetNameMatches::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQueryAssetNameMatches::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset) || Pattern.IsEmpty())
 	{
@@ -214,7 +215,7 @@ bool UAssetValidatorQueryAssetNameMatches::Test_Implementation(UFactory* Factory
 
 // ==================== UAssetValidatorQueryCheckPropertyValue ====================
 
-bool UAssetValidatorQueryCheckPropertyValue::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQueryCheckPropertyValue::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset) || PropertyName == NAME_None)
 	{
@@ -307,7 +308,7 @@ bool UAssetValidatorQueryCheckPropertyValue::Test_Implementation(UFactory* Facto
 
 // ==================== UAssetValidatorQueryAssetInExpectedFolder ====================
 
-bool UAssetValidatorQueryAssetInExpectedFolder::Test_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorQueryAssetInExpectedFolder::Test_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	if (!IsValid(Asset) || ExpectedFolderPath.IsEmpty())
 	{

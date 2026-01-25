@@ -16,6 +16,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class UEditorSubsystem;
 class UObject;
 struct FAssetData;
 struct FAssetValidatorResult;
@@ -31,6 +32,7 @@ struct FAssetValidatorResult;
 
 // ********** Begin Class UAssetValidatorSubsystem *************************************************
 #define FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorSubsystem_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetEditorSubsystemByClass); \
 	DECLARE_FUNCTION(execDoesAssetPassValidation); \
 	DECLARE_FUNCTION(execApplyRulesToAsset); \
 	DECLARE_FUNCTION(execValidateAssets); \

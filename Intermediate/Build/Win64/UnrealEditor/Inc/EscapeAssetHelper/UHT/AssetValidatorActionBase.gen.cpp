@@ -12,18 +12,18 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAssetValidatorActionBase() {}
 
 // ********** Begin Cross Module References ********************************************************
-BLUTILITY_API UClass* Z_Construct_UClass_UEditorUtilityObject();
+COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionBase();
 ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorActionBase_NoRegister();
-UNREALED_API UClass* Z_Construct_UClass_UFactory_NoRegister();
+ESCAPEASSETHELPER_API UClass* Z_Construct_UClass_UAssetValidatorSubsystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_EscapeAssetHelper();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class UAssetValidatorActionBase Function Apply *********************************
 struct AssetValidatorActionBase_eventApply_Parms
 {
-	UFactory* Factory;
+	UAssetValidatorSubsystem* Subsystem;
 	UObject* Asset;
 	bool ReturnValue;
 
@@ -34,20 +34,20 @@ struct AssetValidatorActionBase_eventApply_Parms
 	}
 };
 static FName NAME_UAssetValidatorActionBase_Apply = FName(TEXT("Apply"));
-bool UAssetValidatorActionBase::Apply(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorActionBase::Apply(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	UFunction* Func = FindFunctionChecked(NAME_UAssetValidatorActionBase_Apply);
 	if (!Func->GetOwnerClass()->HasAnyClassFlags(CLASS_Native))
 	{
 		AssetValidatorActionBase_eventApply_Parms Parms;
-		Parms.Factory=Factory;
+		Parms.Subsystem=Subsystem;
 		Parms.Asset=Asset;
 	ProcessEvent(Func,&Parms);
 		return !!Parms.ReturnValue;
 	}
 	else
 	{
-		return Apply_Implementation(Factory, Asset);
+		return Apply_Implementation(Subsystem, Asset);
 	}
 }
 struct Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics
@@ -56,22 +56,22 @@ struct Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Asset Validator" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n\x09 * Apply the action to the given asset.\n\x09 * @param Factory The factory used to import/create the asset (may be null for non-import operations)\n\x09 * @param Asset The asset to apply the action to\n\x09 * @return True if the action was applied successfully\n\x09 */" },
+		{ "Comment", "/**\n\x09 * Apply the action to the given asset.\n\x09 * @param Subsystem The validator subsystem - use GetEditorSubsystemByClass() for editor access\n\x09 * @param Asset The asset to apply the action to\n\x09 * @return True if the action was applied successfully\n\x09 */" },
 #endif
 		{ "ModuleRelativePath", "Public/AssetValidator/AssetValidatorActionBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Apply the action to the given asset.\n@param Factory The factory used to import/create the asset (may be null for non-import operations)\n@param Asset The asset to apply the action to\n@return True if the action was applied successfully" },
+		{ "ToolTip", "Apply the action to the given asset.\n@param Subsystem The validator subsystem - use GetEditorSubsystemByClass() for editor access\n@param Asset The asset to apply the action to\n@return True if the action was applied successfully" },
 #endif
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Factory;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Subsystem;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Asset;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Factory = { "Factory", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AssetValidatorActionBase_eventApply_Parms, Factory), Z_Construct_UClass_UFactory_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Subsystem = { "Subsystem", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AssetValidatorActionBase_eventApply_Parms, Subsystem), Z_Construct_UClass_UAssetValidatorSubsystem_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Asset = { "Asset", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AssetValidatorActionBase_eventApply_Parms, Asset), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -79,7 +79,7 @@ void Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Retu
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AssetValidatorActionBase_eventApply_Parms), &Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Factory,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Subsystem,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_Asset,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAssetValidatorActionBase_Apply_Statics::NewProp_ReturnValue,
 };
@@ -97,11 +97,11 @@ UFunction* Z_Construct_UFunction_UAssetValidatorActionBase_Apply()
 }
 DEFINE_FUNCTION(UAssetValidatorActionBase::execApply)
 {
-	P_GET_OBJECT(UFactory,Z_Param_Factory);
+	P_GET_OBJECT(UAssetValidatorSubsystem,Z_Param_Subsystem);
 	P_GET_OBJECT(UObject,Z_Param_Asset);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(bool*)Z_Param__Result=P_THIS->Apply_Implementation(Z_Param_Factory,Z_Param_Asset);
+	*(bool*)Z_Param__Result=P_THIS->Apply_Implementation(Z_Param_Subsystem,Z_Param_Asset);
 	P_NATIVE_END;
 }
 // ********** End Class UAssetValidatorActionBase Function Apply ***********************************
@@ -151,20 +151,20 @@ struct Z_Construct_UClass_UAssetValidatorActionBase_Statics
 		{ "AutoExpandCategories", "Asset Validator" },
 		{ "BlueprintType", "true" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * Base class for all asset validator actions.\n * Actions are operations that are applied to assets when query conditions are met.\n * Subclass this to create custom actions.\n */" },
+		{ "Comment", "/**\n * Base class for all asset validator actions.\n * Actions are operations that are applied to assets when query conditions are met.\n * Subclass this to create custom actions.\n *\n * Use the Subsystem parameter to access editor subsystems via GetEditorSubsystemByClass().\n */" },
 #endif
 		{ "DisplayName", "Asset Validator Action Base" },
 		{ "IncludePath", "AssetValidator/AssetValidatorActionBase.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/AssetValidator/AssetValidatorActionBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Base class for all asset validator actions.\nActions are operations that are applied to assets when query conditions are met.\nSubclass this to create custom actions." },
+		{ "ToolTip", "Base class for all asset validator actions.\nActions are operations that are applied to assets when query conditions are met.\nSubclass this to create custom actions.\n\nUse the Subsystem parameter to access editor subsystems via GetEditorSubsystemByClass()." },
 #endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UAssetValidatorActionBase_Apply, "Apply" }, // 2571286923
+		{ &Z_Construct_UFunction_UAssetValidatorActionBase_Apply, "Apply" }, // 991671890
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -173,7 +173,7 @@ struct Z_Construct_UClass_UAssetValidatorActionBase_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 UObject* (*const Z_Construct_UClass_UAssetValidatorActionBase_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_UEditorUtilityObject,
+	(UObject* (*)())Z_Construct_UClass_UObject,
 	(UObject* (*)())Z_Construct_UPackage__Script_EscapeAssetHelper,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAssetValidatorActionBase_Statics::DependentSingletons) < 16);
@@ -209,10 +209,10 @@ UAssetValidatorActionBase::~UAssetValidatorActionBase() {}
 struct Z_CompiledInDeferFile_FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActionBase_h__Script_EscapeAssetHelper_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAssetValidatorActionBase, UAssetValidatorActionBase::StaticClass, TEXT("UAssetValidatorActionBase"), &Z_Registration_Info_UClass_UAssetValidatorActionBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAssetValidatorActionBase), 1493381019U) },
+		{ Z_Construct_UClass_UAssetValidatorActionBase, UAssetValidatorActionBase::StaticClass, TEXT("UAssetValidatorActionBase"), &Z_Registration_Info_UClass_UAssetValidatorActionBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAssetValidatorActionBase), 298301880U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActionBase_h__Script_EscapeAssetHelper_2381283043(TEXT("/Script/EscapeAssetHelper"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActionBase_h__Script_EscapeAssetHelper_1056638373(TEXT("/Script/EscapeAssetHelper"),
 	Z_CompiledInDeferFile_FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActionBase_h__Script_EscapeAssetHelper_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PluginProject_Plugins_EscapeAssetHelper_Source_EscapeAssetHelper_Public_AssetValidator_AssetValidatorActionBase_h__Script_EscapeAssetHelper_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

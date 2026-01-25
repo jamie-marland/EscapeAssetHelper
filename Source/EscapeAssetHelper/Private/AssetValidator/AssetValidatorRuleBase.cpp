@@ -1,12 +1,13 @@
 #include "AssetValidator/AssetValidatorRuleBase.h"
+#include "AssetValidator/AssetValidatorSubsystem.h"
 
-bool UAssetValidatorRuleBase::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorRuleBase::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	// Base implementation returns false - subclasses must override
 	return false;
 }
 
-bool UAssetValidatorRule::Apply_Implementation(UFactory* Factory, UObject* Asset)
+bool UAssetValidatorRule::Apply_Implementation(UAssetValidatorSubsystem* Subsystem, UObject* Asset)
 {
 	// Determine if queries pass based on bRequiresAll mode
 	// AND mode (bRequiresAll=true): Start true, all must pass
@@ -23,7 +24,7 @@ bool UAssetValidatorRule::Apply_Implementation(UFactory* Factory, UObject* Asset
 		if (bRequiresAll)
 		{
 			// AND logic - all queries must pass
-			bPassesTests = bPassesTests && Query->Test(Factory, Asset);
+			bPassesTests = bPassesTests && Query->Test(Subsystem, Asset);
 			if (!bPassesTests)
 			{
 				// Early exit if any query fails in AND mode
@@ -33,7 +34,7 @@ bool UAssetValidatorRule::Apply_Implementation(UFactory* Factory, UObject* Asset
 		else
 		{
 			// OR logic - any query passing is sufficient
-			bPassesTests = bPassesTests || Query->Test(Factory, Asset);
+			bPassesTests = bPassesTests || Query->Test(Subsystem, Asset);
 			if (bPassesTests)
 			{
 				// Early exit if any query passes in OR mode
@@ -57,7 +58,7 @@ bool UAssetValidatorRule::Apply_Implementation(UFactory* Factory, UObject* Asset
 			continue;
 		}
 
-		bAllActionsSucceeded = bAllActionsSucceeded && Action->Apply(Factory, Asset);
+		bAllActionsSucceeded = bAllActionsSucceeded && Action->Apply(Subsystem, Asset);
 	}
 
 	return bAllActionsSucceeded;

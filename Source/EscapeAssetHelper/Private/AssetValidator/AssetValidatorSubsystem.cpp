@@ -103,7 +103,7 @@ FAssetValidatorResult UAssetValidatorSubsystem::ValidateAsset(UObject* Asset)
 								continue;
 							}
 
-							bool bQueryResult = Query->Test(nullptr, Asset);
+							bool bQueryResult = Query->Test(this, Asset);
 
 							if (ValidatorRule->bRequiresAll)
 							{
@@ -185,7 +185,7 @@ int32 UAssetValidatorSubsystem::ApplyRulesToAsset(UObject* Asset)
 						continue;
 					}
 
-					if (Rule->Apply(nullptr, Asset))
+					if (Rule->Apply(this, Asset))
 					{
 						RulesApplied++;
 
@@ -388,4 +388,14 @@ void UAssetValidatorSubsystem::OnAssetRenamed(const FAssetData& AssetData, const
 			ShowValidationNotification(Result, true);
 		}
 	}
+}
+
+UEditorSubsystem* UAssetValidatorSubsystem::GetEditorSubsystemByClass(TSubclassOf<UEditorSubsystem> SubsystemClass) const
+{
+	if (!SubsystemClass || !GEditor)
+	{
+		return nullptr;
+	}
+
+	return GEditor->GetEditorSubsystemBase(SubsystemClass);
 }

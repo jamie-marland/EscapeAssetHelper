@@ -33,7 +33,6 @@ public class EscapeAssetHelper : ModuleRules
 				"ToolMenus",
 				"Projects",
 				"EditorScriptingUtilities",
-				"Blutility",
 			}
 		);
 	}
