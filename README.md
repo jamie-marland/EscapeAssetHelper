@@ -7,9 +7,9 @@ Designed for Escape Studios Projects.
 
 Escape Asset Helper combines three integrated systems to help teams maintain consistent, high-quality asset pipelines:
 
-- [**Asset Naming**](DOCUMENTATION.md#asset-naming) - Validates and enforces naming conventions following the `Prefix_BaseAssetName_Variant_Suffix` format.
-- [**Asset Validator**](DOCUMENTATION.md#asset-validator) - A rules system using queries and actions to validate and edit asset properties.
-- [**Asset Status Overlay**](DOCUMENTATION.md#asset-status-overlay) - Visual status indicators showing validation state at a glance.
+- [**Asset Naming**](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation#asset-naming) - Validates and enforces naming conventions following the `Prefix_BaseAssetName_Variant_Suffix` format.
+- [**Asset Validator**](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation#asset-validator) - A rules system using queries and actions to validate and edit asset properties.
+- [**Asset Status Overlay**](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation#asset-status-overlay) - Visual status indicators showing validation state at a glance.
 
 ## Features
 
@@ -25,7 +25,7 @@ Escape Asset Helper combines three integrated systems to help teams maintain con
 
 ## Documentation
 
-For detailed documentation on configuration, usage, and troubleshooting, see [DOCUMENTATION.md](DOCUMENTATION.md).
+For detailed documentation on configuration, usage, and troubleshooting, see the [Wiki](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation) or [DOCUMENTATION.md](DOCUMENTATION.md).
 
 ### Requirements
 
