@@ -36,7 +36,7 @@ For detailed documentation on configuration, usage, and troubleshooting, see [DO
 
 1. Go to the [latest release](https://github.com/jamie-marland/EscapeAssetHelper/releases) or the sidepanel and download the source code as a zip, and extract.
 2. Copy the `EscapeAssetHelper` folder to your project's `Plugins` directory.  You may need to make it.
-3. Open the Unreal Editor Project. It will say that it needs to build the plugin. **Do not worry!** Click *Yes*.
+3. Open the Unreal Editor Project. It may say it needs to build the plugin. **Do not worry!** Click *Yes*.
 4. The defaults should suffice, but if not, Open Edit → Project Settings → Plugins → Escape Asset Helper to configure.
 
 ---
