@@ -29,15 +29,24 @@ For detailed documentation on configuration, usage, and troubleshooting, see the
 
 ### Requirements
 
-- Unreal Engine 5.6 or later
+- Unreal Engine 5.6.1
 - Editor Scripting Utilities plugin (Dependency auto-enabled)
 
 ## Installation
 
-1. Go to the [latest release](https://github.com/jamie-marland/EscapeAssetHelper/releases) or the sidepanel and download the source code as a zip, and extract.
+1. Go to the [latest release](https://github.com/jamie-marland/EscapeAssetHelper/releases) or the sidepanel and download the release zip, and extract.
+<img width="615" height="62" alt="image" src="https://github.com/user-attachments/assets/390d6877-e2fe-4adc-912a-d3a99fb9570b" />
+
 2. Copy the `EscapeAssetHelper` folder to your project's `Plugins` directory.  You may need to make it.
+<img width="637" height="236" alt="image" src="https://github.com/user-attachments/assets/78eaf97d-08a9-4089-bcea-225b7c3359e6" />
+
 3. Open the Unreal Editor Project. It may say it needs to build the plugin. **Do not worry!** Click *Yes*.
-4. The defaults should suffice, but if not, Open Edit → Project Settings → Plugins → Escape Asset Helper to configure.
+
+4. Remember to submit to Perforce by going into P4V → Workspace → Project Location and clicking on Plugins, then Add to include in your next submit!
+<img width="401" height="387" alt="image" src="https://github.com/user-attachments/assets/68ba126a-a8e7-402e-b22d-c6b691aa4945" />
+
+5. The defaults should suffice, but if not, Open Edit → Project Settings → Plugins → Escape Asset Helper to configure. Remember to read the [Documentation.](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation)
+
 
 ---
 
