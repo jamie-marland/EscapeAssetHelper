@@ -55,6 +55,15 @@ public:
 	static bool IsPascalCase(const FString& Input);
 
 	/**
+	 * Check if a string with underscores has each segment in PascalCase.
+	 * e.g. "Event_Creature_MirrorScare" passes because each part is PascalCase.
+	 * @param Input The string to check (may contain underscores)
+	 * @return True if every underscore-separated segment is PascalCase
+	 */
+	UFUNCTION(BlueprintCallable, Category = "Asset Naming")
+	static bool IsExtendedPascalCase(const FString& Input);
+
+	/**
 	 * Check if a variant string is valid (allows numbers, single letters, or PascalCase)
 	 * @param Variant The variant string to check
 	 * @return True if the variant is valid

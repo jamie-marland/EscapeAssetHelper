@@ -44,6 +44,13 @@ void UAssetHandlingSettings::PostEditChangeProperty(FPropertyChangedEvent& Prope
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 	InvalidateCache();
 	ValidateSettings();
+
+	// Clear overlay cache so thumbnails refresh with new settings
+	if (FModuleManager::Get().IsModuleLoaded(TEXT("EscapeAssetHelper")))
+	{
+		FEscapeAssetHelperModule& Module = FModuleManager::GetModuleChecked<FEscapeAssetHelperModule>(TEXT("EscapeAssetHelper"));
+		Module.ClearOverlayCache();
+	}
 }
 
 void UAssetHandlingSettings::ValidateSettings() const

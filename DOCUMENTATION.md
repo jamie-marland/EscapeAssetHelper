@@ -95,6 +95,7 @@ Navigate to Edit → Project Settings → Plugins → Escape Asset Helper.
 **Asset Naming**
 - Naming Conventions: Map asset classes to their prefix/suffix rules.
 - Require PascalCase: Enforce PascalCase for base asset names.
+- Allow Extended Base Names: Allow underscore-separated names where each segment is PascalCase (e.g., `BP_Event_Creature_MirrorScare`).
 - Import: Show naming dialogue on import, auto-fix behaviour.
 
 **Asset Validator**
@@ -137,6 +138,10 @@ For each asset class, you can configure:
 - **Suffix Aliases**: Map common variations to canonical suffixes (e.g., `Albedo` → `D`)
 - **Default Suffix**: Suggested suffix for new assets
 - **Suffix Required**: Whether a valid suffix is mandatory
+
+### Default Naming Conventions
+
+The plugin ships with naming conventions based on [Allar's UE5 Style Guide](https://github.com/Allar/ue5-style-guide), a widely-adopted community standard. These conventions are loaded automatically and can be viewed or modified in Project Settings.
 
 ---
 
@@ -188,6 +193,31 @@ Log Message and Show Notification actions support format tokens:
 - `{AssetName}` - The asset's name
 - `{AssetPath}` - The asset's full package path
 - `{AssetClass}` - The asset's class name
+
+### Default Validation Rules
+
+The plugin ships with validation rules for common asset types. These rules are applied automatically on import and can be found in the plugin's Content folder (`/EscapeAssetHelper/Rule/`).
+
+**Texture Rules (`Texture2D`):**
+
+| Rule | Description |
+|------|-------------|
+| `AVR_PowerOfTwo` | Warns if texture dimensions aren't powers of two (128, 256, 512, 1024, etc.) |
+| `AVR_UniformSize` | Warns if texture isn't square (width ≠ height) |
+| `AVR_DiffuseCompression` | Sets diffuse textures (`_D` suffix) to use DXT1/BC1 compression |
+| `AVR_ORMPackCompression` | Sets ORM packed textures (`_ORM` suffix) to use BC7 compression with no sRGB |
+| `AVR_NormalCompression` | Sets normal maps (`_N` suffix) to use BC5 compression with no sRGB |
+| `AVR_MaskCompression` | Sets mask textures (`_M` suffix) to use BC4 compression with no sRGB |
+
+**Static Mesh Rules (`StaticMesh`):**
+
+| Rule | Description |
+|------|-------------|
+| `AVR_MaxPolygons` | Warns if the mesh exceeds a polygon threshold |
+| `AVR_TurnOnNanite` | Enables Nanite for high-poly meshes |
+| `AVR_RemoveLightMap` | Disables lightmap generation to save memory |
+
+These rules follow common Unreal Engine best practices for texture compression and mesh optimisation. You can disable individual rules by removing them from the Validation Rules map in Project Settings, or modify the rule data assets directly to change their behaviour.
 
 ### Rule Example
 
@@ -305,3 +335,8 @@ Multiple assets can be selected for batch operations.
 - Confirm "Enable Asset Validator" is checked in settings
 - Verify the rule's target class matches the asset
 - Check that queries are returning true (enable Verbose Logging)
+
+**Case-only rename warning with source control**
+- When auto-fix only changes capitalisation (e.g., `BP_mytexture` → `BP_MyTexture`), a toast warning appears if source control is enabled
+- Many version control systems (particularly Perforce on Windows) don't handle case-only renames correctly
+- Options: proceed anyway, manually delete and re-import, or use your VCS's case-rename workflow

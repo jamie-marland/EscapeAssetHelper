@@ -158,6 +158,11 @@ public:
 		meta=(DisplayName="Require PascalCase", ToolTip="When enabled, asset base names must use PascalCase format (e.g., 'MyTexture' not 'mytexture' or 'my_texture'). Applies globally to all conventions."))
 	bool bRequirePascalCase = true;
 
+	/** Allow base names with underscores if each segment is PascalCase (e.g. BP_Event_Creature_MirrorScare) */
+	UPROPERTY(Config, EditAnywhere, Category="Asset Naming",
+		meta=(DisplayName="Allow Extended Base Names", EditCondition="bRequirePascalCase", ToolTip="When enabled, base names containing underscores are allowed as long as each segment follows PascalCase. For example, 'Event_Creature_MirrorScare' is valid because each part is PascalCase. Only relevant when Require PascalCase is on."))
+	bool bAllowExtendedBaseName = true;
+
 	// -------------------- Import Behavior --------------------
 
 	/** Show the naming dialog when assets are imported */

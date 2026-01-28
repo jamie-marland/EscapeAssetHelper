@@ -58,6 +58,12 @@ analysing, planning, coding and testing.'**
 
 ## Changelog
 
+**Release v1.3**
+- _Added "Allow Extended Base Names" setting - validates underscore-separated names like `BP_Event_Creature_MirrorScare` where each segment is PascalCase._
+- _Added case-only rename warning - shows a toast notification when auto-fix performs a capitalisation-only rename with source control enabled._
+- _Fixed overlay not updating when settings change - toggling settings now refreshes Content Browser thumbnails immediately._
+- _Blueprint-only project compatibility - release builds now include `Installed: true` for projects without a C++ compiler._
+
 **Release v1.2**
 - _Replaced unused `UFactory*` parameter._
 - _Query/Actions now have a new `UAssetValidatorSubsystem*` variable._

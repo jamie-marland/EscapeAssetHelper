@@ -239,6 +239,28 @@ bool UAssetNamingParser::IsPascalCase(const FString& Input)
 	return true;
 }
 
+bool UAssetNamingParser::IsExtendedPascalCase(const FString& Input)
+{
+	if (Input.IsEmpty())
+	{
+		return true;
+	}
+
+	// Split on underscores and chekc each part
+	TArray<FString> Parts;
+	Input.ParseIntoArray(Parts, TEXT("_"), true);
+
+	for (const FString& Part : Parts)
+	{
+		if (!IsPascalCase(Part))
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
 bool UAssetNamingParser::IsValidVariant(const FString& Variant)
 {
 	if (Variant.IsEmpty())
@@ -355,7 +377,21 @@ FString UAssetNamingParser::GenerateSuggestedName(const FString& CurrentName, co
 		FString ProcessedBaseName = ConvertNumbersToWords(Parsed.BaseAssetName);
 		if (Settings && Settings->bRequirePascalCase)
 		{
-			ProcessedBaseName = ToPascalCase(ProcessedBaseName);
+			// Extended names: apply PascalCase per segment to keep underscores
+			if (Settings->bAllowExtendedBaseName && ProcessedBaseName.Contains(TEXT("_")))
+			{
+				TArray<FString> Segments;
+				ProcessedBaseName.ParseIntoArray(Segments, TEXT("_"), true);
+				for (FString& Segment : Segments)
+				{
+					Segment = ToPascalCase(Segment);
+				}
+				ProcessedBaseName = FString::Join(Segments, TEXT("_"));
+			}
+			else
+			{
+				ProcessedBaseName = ToPascalCase(ProcessedBaseName);
+			}
 		}
 		Corrected.BaseAssetName = ProcessedBaseName;
 	}

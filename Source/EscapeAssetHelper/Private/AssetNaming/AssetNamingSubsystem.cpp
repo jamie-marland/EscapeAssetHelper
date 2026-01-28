@@ -148,7 +148,15 @@ FAssetValidationResult UAssetNamingSubsystem::ValidateAsset(UObject* Asset) cons
 	// Check casing
 	if (Settings->bRequirePascalCase && !Parsed.BaseAssetName.IsEmpty())
 	{
-		if (!UAssetNamingParser::IsPascalCase(Parsed.BaseAssetName))
+		bool bPassesCasing = UAssetNamingParser::IsPascalCase(Parsed.BaseAssetName);
+
+		// Extended base names allow underscores if each segment is PascalCase
+		if (!bPassesCasing && Settings->bAllowExtendedBaseName)
+		{
+			bPassesCasing = UAssetNamingParser::IsExtendedPascalCase(Parsed.BaseAssetName);
+		}
+
+		if (!bPassesCasing)
 		{
 			Result.bIsValid = false;
 			FString Corrected = UAssetNamingParser::ToPascalCase(Parsed.BaseAssetName);
@@ -447,6 +455,25 @@ bool UAssetNamingSubsystem::AutoFixAssetName(UObject* Asset)
 	if (!CheckPathLengthAndWarn(PackagePath, Result.SuggestedName))
 	{
 		return false;
+	}
+
+	// Warn if case-only rename with source control active
+	if (Result.CurrentName.Equals(Result.SuggestedName, ESearchCase::IgnoreCase) &&
+		Result.CurrentName != Result.SuggestedName)
+	{
+		ISourceControlModule& SCModule = ISourceControlModule::Get();
+		if (SCModule.IsEnabled() && SCModule.GetProvider().IsAvailable())
+		{
+			FNotificationInfo Info(FText::Format(
+				FText::FromString(TEXT("Warning: '{0}' rename is case-only. Some version control systems may not handle this correctly.")),
+				FText::FromString(Result.CurrentName)));
+			Info.ExpireDuration = 6.0f;
+			Info.bUseThrobber = false;
+			FSlateNotificationManager::Get().AddNotification(Info);
+
+			UE_LOG(LogEscapeAssetHelper, Warning, TEXT("[Naming] Case-only rename '%s' -> '%s' with source control active"),
+				*Result.CurrentName, *Result.SuggestedName);
+		}
 	}
 
 	return RenameAsset(Asset, Result.SuggestedName);

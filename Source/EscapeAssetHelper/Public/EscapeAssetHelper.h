@@ -22,6 +22,9 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 
+	/** Clear the overlay status cache (call when settings change) */
+	void ClearOverlayCache();
+
 private:
 	/** Extends the Content Browser context menu with validation actions */
 	TSharedRef<FExtender> OnExtendContentBrowserAssetMenu(const TArray<FAssetData>& SelectedAssets);

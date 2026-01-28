@@ -143,6 +143,14 @@ void FEscapeAssetHelperModule::LoadPluginConfig()
 	}
 }
 
+void FEscapeAssetHelperModule::ClearOverlayCache()
+{
+	if (StatusOverlay)
+	{
+		StatusOverlay->ClearCache();
+	}
+}
+
 void FEscapeAssetHelperModule::ShutdownModule()
 {
 	if (StatusOverlay)

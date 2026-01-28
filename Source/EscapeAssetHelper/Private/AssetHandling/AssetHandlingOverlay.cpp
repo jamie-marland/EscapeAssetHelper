@@ -144,7 +144,15 @@ EAssetStatusType FAssetHandlingOverlay::GetAssetStatus(const FAssetData& AssetDa
 	// Check casing
 	if (Settings->bRequirePascalCase && !Parsed.BaseAssetName.IsEmpty())
 	{
-		if (!UAssetNamingParser::IsPascalCase(Parsed.BaseAssetName))
+		bool bPassesCasing = UAssetNamingParser::IsPascalCase(Parsed.BaseAssetName);
+
+		// Extended base names allow underscores if each segment is PascalCase
+		if (!bPassesCasing && Settings->bAllowExtendedBaseName)
+		{
+			bPassesCasing = UAssetNamingParser::IsExtendedPascalCase(Parsed.BaseAssetName);
+		}
+
+		if (!bPassesCasing)
 		{
 			Result = EAssetStatusType::Invalid;
 			StatusCache.Add(AssetPath, Result);
