@@ -34,20 +34,20 @@ For detailed documentation on configuration, usage, and troubleshooting, see the
 
 ## Installation
 
-1. Go to the [latest release](https://github.com/jamie-marland/EscapeAssetHelper/releases) or the sidepanel and download the release zip, and extract.
+1. Go to the [latest release](https://github.com/jamie-marland/EscapeAssetHelper/releases) or the sidepanel and download the EscapeAssetHelperV[Release].zip, and extract.
 <img width="615" height="62" alt="image" src="https://github.com/user-attachments/assets/390d6877-e2fe-4adc-912a-d3a99fb9570b" />
 
-2. Copy the `EscapeAssetHelper` folder to your project's `Plugins` directory.  You may need to make it.
-<img width="637" height="236" alt="image" src="https://github.com/user-attachments/assets/78eaf97d-08a9-4089-bcea-225b7c3359e6" />
+2. Copy the `EscapeAssetHelper` folder to your project's `Plugins` directory.  You may need to make the folder!
+<img width="637" height="236" alt="Transfer To Project's Plugins" src="https://github.com/user-attachments/assets/78eaf97d-08a9-4089-bcea-225b7c3359e6" />
 
 3. Open the Unreal Editor Project. It may say it needs to build the plugin. **Do not worry!** Click *Yes*. It should open up and easily verify by checking if any asset has a symbol
-<img width="811" height="276" alt="image" src="https://github.com/user-attachments/assets/251c737f-4fad-4471-90c6-fb9e184147a9" />
+<img width="811" height="276" alt="Verify Plugin Installed" src="https://github.com/user-attachments/assets/251c737f-4fad-4471-90c6-fb9e184147a9" />
 
 4. Remember to submit to Perforce by going into P4V → Workspace → Project Location and clicking on Plugins, then Add to include in your next submit!
-<img width="401" height="387" alt="image" src="https://github.com/user-attachments/assets/68ba126a-a8e7-402e-b22d-c6b691aa4945" />
+<img width="401" height="380" alt="Add And Submit To Perforce" src="https://github.com/user-attachments/assets/68ba126a-a8e7-402e-b22d-c6b691aa4945" />
 
-5. The defaults should suffice, but if not, Open Edit → Project Settings → Plugins → Escape Asset Helper to configure. Remember to read the [Documentation.](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation)
-
+5. The defaults should suffice, but if not, Open Edit → Project Settings → Plugins → Escape Asset Helper to configure. Remember to read the [Documentation](https://github.com/jamie-marland/EscapeAssetHelper/wiki/Documentation).
+<img width="1084" height="648" alt="Edit Plugin Settings" src="https://github.com/user-attachments/assets/814a4610-086b-41be-aae1-4a544d4690d4" />
 
 ---
 
