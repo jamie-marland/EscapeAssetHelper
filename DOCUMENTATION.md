@@ -62,7 +62,7 @@ Validation rules let you automatically check and modify asset properties:
 
 1. In Content Browser, right-click → **Miscellaneous** → **Data Asset**
 2. Select **Asset Validator Rule** as the class
-3. Name it something descriptive (e.g., `Rule_SetORMCompression`)
+3. Name it something descriptive (e.g., `AVR_SetORMCompression`)
 4. Open the data asset and configure:
    - Add **Queries** to define when the rule should apply
    - Add **Actions** to define what happens when queries pass
@@ -95,7 +95,7 @@ Navigate to Edit → Project Settings → Plugins → Escape Asset Helper.
 **Asset Naming**
 - Naming Conventions: Map asset classes to their prefix/suffix rules.
 - Require PascalCase: Enforce PascalCase for base asset names.
-- Allow Extended Base Names: Allow underscore-separated names where each segment is PascalCase (e.g., `BP_Event_Creature_MirrorScare`).
+- Allow Extended Base Names: Extended Basenames e.g. `BP_Event_Player_Test`.
 - Import: Show naming dialogue on import, auto-fix behaviour.
 
 **Asset Validator**
@@ -219,12 +219,6 @@ The plugin ships with validation rules for common asset types. These rules are a
 
 These rules follow common Unreal Engine best practices for texture compression and mesh optimisation. You can disable individual rules by removing them from the Validation Rules map in Project Settings, or modify the rule data assets directly to change their behaviour.
 
-### Rule Example
-
-**Example - Set ORM Compression:**
-
-<img width="300" height="350" alt="image" src="https://github.com/user-attachments/assets/a2fb747e-9897-4b6e-954e-728d766fd753" />
-
 ### Creating Custom Queries & Actions
 
 **Blueprint Implementation:**
@@ -235,7 +229,7 @@ These rules follow common Unreal Engine best practices for texture compression a
 
 **Accessing Editor Subsystems in Blueprints:**
 
-To get access to Subsystems use the `Subsystem` parameter passed to `Test`/`Apply`:
+To get access to Subsystems, use the `Subsystem` parameter passed to `Test`/`Apply`:
 
 1. From the `Subsystem` pin, call `Get Editor Subsystem By Class`
 2. Select the subsystem class you need (e.g., `Static Mesh Editor Subsystem`)
@@ -276,8 +270,6 @@ public:
 
 The overlay displays validation status directly on asset thumbnails.
 
-<img width="424" height="180" alt="image" src="https://github.com/user-attachments/assets/829e5970-8487-4742-aabd-01ca270c1f22" />
-
 ### Symbols
 
 | Symbol | Color | Meaning |
@@ -296,8 +288,6 @@ The overlay displays validation status directly on asset thumbnails.
 ---
 
 ## Context Menu Actions
-
-<img width="508" height="375" alt="image" src="https://github.com/user-attachments/assets/0e850661-849b-47da-84ce-50a1bda56e9f" />
 
 Right-click assets in the Content Browser, and sectioned in **Escape Asset Helper** is the following:
 
