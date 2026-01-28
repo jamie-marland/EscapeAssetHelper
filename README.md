@@ -40,7 +40,8 @@ For detailed documentation on configuration, usage, and troubleshooting, see the
 2. Copy the `EscapeAssetHelper` folder to your project's `Plugins` directory.  You may need to make it.
 <img width="637" height="236" alt="image" src="https://github.com/user-attachments/assets/78eaf97d-08a9-4089-bcea-225b7c3359e6" />
 
-3. Open the Unreal Editor Project. It may say it needs to build the plugin. **Do not worry!** Click *Yes*.
+3. Open the Unreal Editor Project. It may say it needs to build the plugin. **Do not worry!** Click *Yes*. It should open up and easily verify by checking if any asset has a symbol
+<img width="811" height="276" alt="image" src="https://github.com/user-attachments/assets/251c737f-4fad-4471-90c6-fb9e184147a9" />
 
 4. Remember to submit to Perforce by going into P4V → Workspace → Project Location and clicking on Plugins, then Add to include in your next submit!
 <img width="401" height="387" alt="image" src="https://github.com/user-attachments/assets/68ba126a-a8e7-402e-b22d-c6b691aa4945" />
